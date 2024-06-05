@@ -2,7 +2,7 @@ We used the Flicker8k Dataset, which can be found [here](https://github.com/jbro
 
 To generate captions for images, we employed an encoder-decoder architecture. In this architecture, the image features are first extracted using a Convolutional Neural Network (CNN). The CNN acts as a feature extractor, capturing the essential visual details of the images. These extracted features are then used as inputs to the decoder.
 
-The decoder is responsible for generating the textual description of the image. It processes the previous text in the caption to predict the next word. Specifically, we used a Recurrent Neural Network (RNN) with Gated Recurrent Units (GRU) as the decoder. The GRU helps to manage long-term dependencies and improve the efficiency of the learning process.
+The decoder is responsible for generating the textual description of the image (using ANN to predict the next word). It processes the previous text in the caption to predict the next word. Specifically, we used a Recurrent Neural Network (RNN) with Gated Recurrent Units (GRU) as the encoder. The GRU helps to manage long-term dependencies and improve the efficiency of the learning process.
 
 To further enhance the performance, we utilized teacher forcing methods. Teacher forcing involves using the actual target word as the next input to the decoder during training, rather than using the word predicted by the model. This technique helps the model to learn more effectively by providing it with the correct context at each step during training.
 
